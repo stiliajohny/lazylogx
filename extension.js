@@ -184,9 +184,6 @@ function activate(context) {
             case 'cpp':
                 languageSpecificConsoleLog = `printf(${text})\n`;
                 break;
-            case 'css':
-                languageSpecificConsoleLog = `console.log(${text})\n`;
-                break;
         }
 
         // create the new line text
