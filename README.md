@@ -36,6 +36,7 @@ A VSCode extension that will make lazy debugging easier
 - [About The Project](#about-the-project)
 - [Usage](#usage)
 - [Using the VSCode Extension](#using-the-vscode-extension)
+- [Supported Languages](#supported-languages)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -63,6 +64,62 @@ We have them all, from Python to C# and even JavaScript.
 5. Run your code and enjoy lazy debugging.
 
 ---
+
+## Supported Languages
+
+<details>
+<summary>Expand</summary>
+
+- JavaScript
+- TypeScript
+- Python
+- Java
+- C#
+- PHP
+- Ruby
+- Go
+- Rust
+- Swift
+- Kotlin
+- Dart
+- Scala
+- Haskell
+- Elixir
+- Clojure
+- F#
+- Erlang
+- Perl
+- Lua
+- R
+- PowerShell
+- CoffeeScript
+- Julia
+- Nim
+- Crystal
+- OCaml
+- Groovy
+- Pascal
+- Racket
+- Scheme
+- Smalltalk
+- Fortran
+- D
+- Lisp
+- Hack
+- MATLAB
+- Verilog
+- VHDL
+- Ada
+- Prolog
+- SQL
+- Tcl
+- Visual Basic
+- ActionScript
+- Apex
+- C
+- C++
+- CSS
+  </details>
 
 ## Roadmap
 
