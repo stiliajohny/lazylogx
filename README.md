@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/stiliajohny/pasteportal">
+  <a href="https://github.com/stiliajohny/easylogx">
     <img src="https://github.com/stiliajohny/easylox/raw/master/resources/icon.png" alt="Main Logo" width="80" height="80">
   </a>
 
@@ -21,9 +21,9 @@ A VSCode extension that will make lazy debugging easier
     <br />
     <a href="https://marketplace.visualstudio.com/items?itemName=JohnStilia.easylogx">VSCode Extension</a>
     </br>
-    <a href="https://github.com/stiliajohny/pasteportal/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
+    <a href="https://github.com/stiliajohny/easylogx/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
     ·
-    <a href="https://github.com/stiliajohny/pasteportal/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
+    <a href="https://github.com/stiliajohny/easylogx/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
 
   </p>
 </p>
@@ -123,7 +123,7 @@ We have them all, from Python to C# and even JavaScript.
 
 ## Roadmap
 
-See the [open issues](https://github.com/stiliajohny/pasteportal/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/stiliajohny/easylogx/issues) for a list of proposed features (and known issues).
 
 ---
 
@@ -164,16 +164,16 @@ John Stilia - stilia.johny@gmail.com
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/stiliajohny/pasteportal.svg
-[contributors-url]: https://github.com/stiliajohny/pasteportal/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/stiliajohny/pasteportal.svg
-[forks-url]: https://github.com/stiliajohny/pasteportal/network/members
-[stars-shield]: https://img.shields.io/github/stars/stiliajohny/pasteportal.svg
-[stars-url]: https://github.com/stiliajohny/pasteportal/stargazers
-[issues-shield]: https://img.shields.io/github/issues/stiliajohny/pasteportal.svg
-[issues-url]: https://github.com/stiliajohny/pasteportal/issues
-[license-shield]: https://img.shields.io/github/license/stiliajohny/pasteportal
-[license-url]: https://github.com/stiliajohny/pasteportal/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/stiliajohny/easylogx.svg
+[contributors-url]: https://github.com/stiliajohny/easylogx/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/stiliajohny/easylogx.svg
+[forks-url]: https://github.com/stiliajohny/easylogx/network/members
+[stars-shield]: https://img.shields.io/github/stars/stiliajohny/easylogx.svg
+[stars-url]: https://github.com/stiliajohny/easylogx/stargazers
+[issues-shield]: https://img.shields.io/github/issues/stiliajohny/easylogx.svg
+[issues-url]: https://github.com/stiliajohny/easylogx/issues
+[license-shield]: https://img.shields.io/github/license/stiliajohny/easylogx
+[license-url]: https://github.com/stiliajohny/easylogx/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg
 
 [linkedin-url]: https://linkedin.com/in/]/
