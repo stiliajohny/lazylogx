@@ -1,6 +1,6 @@
 {
-  "name": "easylogx",
-  "displayName": "EasyLogX",
+  "name": "lazylogx",
+  "displayName": "LazyLogX",
   "author": "stilia.johny",
   "license": "GPL-3.0",
   "publisher": "JohnStilia",
@@ -18,7 +18,7 @@
     "Other"
   ],
   "keywords": [
-    "easylogx",
+    "lazylogx",
     "console.log",
     "console",
     "debugging",
@@ -30,7 +30,55 @@
     "javascript",
     "typescript",
     "js",
-    "ts"
+    "ts",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Java",
+    "C#",
+    "PHP",
+    "Ruby",
+    "Go",
+    "Rust",
+    "Swift",
+    "Kotlin",
+    "Dart",
+    "Scala",
+    "Haskell",
+    "Elixir",
+    "Clojure",
+    "F#",
+    "Erlang",
+    "Perl",
+    "Lua",
+    "R",
+    "PowerShell",
+    "CoffeeScript",
+    "Julia",
+    "Nim",
+    "Crystal",
+    "OCaml",
+    "Groovy",
+    "Pascal",
+    "Racket",
+    "Scheme",
+    "Smalltalk",
+    "Fortran",
+    "D",
+    "Lisp",
+    "Hack",
+    "MATLAB",
+    "Verilog",
+    "VHDL",
+    "Ada",
+    "Prolog",
+    "SQL",
+    "Tcl",
+    "Visual Basic",
+    "ActionScript",
+    "Apex",
+    "C",
+    "C++"
   ],
   "contributors": [
     {
@@ -38,21 +86,21 @@
       "url": "https://github.com/stiliajohny"
     },
     {
-      "name": "yezen",
-      "url": "TODO"
+      "name": "yezen-alnafei",
+      "url": "https://github.com/yezen-alnafei"
     }
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "easylogx.addLazyDebugging",
+        "command": "lazylogx.addLazyDebugging",
         "title": "Add lazy debbuging"
       }
     ],
     "keybindings": [
       {
-        "command": "easylogx.addLazyDebugging",
+        "command": "lazylogx.addLazyDebugging",
         "mac": "ctrl+cmd+alt+l",
         "key": "ctrl+cmd+alt+l",
         "when": "editorTextFocus"
@@ -61,15 +109,15 @@
     "menus": {
       "editor/context": [
         {
-          "command": "easylogx.addLazyDebugging",
+          "command": "lazylogx.addLazyDebugging",
           "group": "navigation"
         }
       ]
     }
   },
   "repository": {
-    "type": "git",
-    "url": ""
+    "type": "https",
+    "url": "https://github.com/stiliajohny/lazylogx"
   },
   "scripts": {
     "lint": "eslint .",

@@ -8,9 +8,9 @@ function activate(context) {
 
 	console.log('Congratulations, your extension "easylogx" is now active!');
 
-	let disposable = vscode.commands.registerCommand('easylogx.addLazyDebugging', function () {
+	let disposable = vscode.commands.registerCommand('lazylogx.addLazyDebugging', function () {
 
-        let consoleLogText = "📃 EasyLogX Lazy Debugging: "
+        let consoleLogText = "📃 LazyLogX Lazy Debugging: "
 
 		// get the sellected text from the editor
 		let editor = vscode.window.activeTextEditor;
@@ -19,7 +19,7 @@ function activate(context) {
 		let text = editor.document.getText(selection);
 
         // add the consoleLogText at the beginning of the text with double quoets also convert the text to a string
-        text = '"' + consoleLogText + '" + ' +  String(text) ;
+        text = '"' + consoleLogText + '" + '  +  String(text) ; // FIXME  this is some crazy ass string manipulation here
 
 
 		// detect what is the language of the file

@@ -10,20 +10,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/stiliajohny/easylogx">
+  <a href="https://github.com/stiliajohny/lazylogx">
     <img src="https://github.com/stiliajohny/easylox/raw/master/resources/icon.png" alt="Main Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">EasyLogX</h3>
+  <h3 align="center">LazyLogX</h3>
 
   <p align="center">
 A VSCode extension that will make lazy debugging easier
     <br />
-    <a href="https://marketplace.visualstudio.com/items?itemName=JohnStilia.easylogx">VSCode Extension</a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=JohnStilia.lazylogx">VSCode Extension</a>
     </br>
-    <a href="https://github.com/stiliajohny/easylogx/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
+    <a href="https://github.com/stiliajohny/lazylogx/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
     ·
-    <a href="https://github.com/stiliajohny/easylogx/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
+    <a href="https://github.com/stiliajohny/lazylogx/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
 
   </p>
 </p>
@@ -57,7 +57,7 @@ We have them all, from Python to C# and even JavaScript.
 
 ## Using the VSCode Extension
 
-1. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=JohnStilia.easylogx)
+1. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=JohnStilia.lazylogx)
 2. Write Code
 3. Select a variable
 4. Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Cmd</kbd>+<kbd>L</kbd> or <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>L</kbd> to log the variable on a new line.
@@ -123,7 +123,7 @@ We have them all, from Python to C# and even JavaScript.
 
 ## Roadmap
 
-See the [open issues](https://github.com/stiliajohny/easylogx/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/stiliajohny/lazylogx/issues) for a list of proposed features (and known issues).
 
 ---
 
@@ -155,28 +155,24 @@ John Stilia - stilia.johny@gmail.com
 
 ## Acknowledgements
 
-- [Yezen](https://github.com/null0)
+- [Yezen](https://github.com/yezen-alnafei)
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Img Shields](https://shields.io)
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Pages](https://pages.github.com)
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/stiliajohny/easylogx.svg
-[contributors-url]: https://github.com/stiliajohny/easylogx/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/stiliajohny/easylogx.svg
-[forks-url]: https://github.com/stiliajohny/easylogx/network/members
-[stars-shield]: https://img.shields.io/github/stars/stiliajohny/easylogx.svg
-[stars-url]: https://github.com/stiliajohny/easylogx/stargazers
-[issues-shield]: https://img.shields.io/github/issues/stiliajohny/easylogx.svg
-[issues-url]: https://github.com/stiliajohny/easylogx/issues
-[license-shield]: https://img.shields.io/github/license/stiliajohny/easylogx
-[license-url]: https://github.com/stiliajohny/easylogx/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/stiliajohny/lazylogx.svg
+[contributors-url]: https://github.com/stiliajohny/lazylogx/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/stiliajohny/lazylogx.svg
+[forks-url]: https://github.com/stiliajohny/lazylogx/network/members
+[stars-shield]: https://img.shields.io/github/stars/stiliajohny/lazylogx.svg
+[stars-url]: https://github.com/stiliajohny/lazylogx/stargazers
+[issues-shield]: https://img.shields.io/github/issues/stiliajohny/lazylogx.svg
+[issues-url]: https://github.com/stiliajohny/lazylogx/issues
+[license-shield]: https://img.shields.io/github/license/stiliajohny/lazylogx
+[license-url]: https://github.com/stiliajohny/lazylogx/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg
 
 [linkedin-url]: https://linkedin.com/in/]/
-[product-screenshot]: .assets/screenshot.png
 [ask-me-anything]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
 [personal-page]: https://github.com/stiliajohny
