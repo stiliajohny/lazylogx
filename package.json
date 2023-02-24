@@ -1,0 +1,87 @@
+{
+  "name": "easylogx",
+  "displayName": "EasyLogX",
+  "author": "stilia.johny",
+  "license": "GPL-3.0",
+  "publisher": "JohnStilia",
+  "description": "A VScode extension that will make lazy debugging easier",
+  "icon": "resources/icon,png",
+  "version": "0.0.1",
+  "preview": true,
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "easylogx",
+    "console.log",
+    "console",
+    "debugging",
+    "debug",
+    "log",
+    "logging",
+    "vscode",
+    "extension",
+    "javascript",
+    "typescript",
+    "js",
+    "ts"
+  ],
+  "contributors": [
+    {
+      "name": "stiliajohny",
+      "url": "https://github.com/stiliajohny"
+    },
+    {
+      "name": "yezen",
+      "url": "TODO"
+    }
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "easylogx.addLazyDebugging",
+        "title": "Add lazy debbuging"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "easylogx.addLazyDebugging",
+        "mac": "ctrl+cmd+alt+l",
+        "key": "ctrl+cmd+alt+l",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "easylogx.addLazyDebugging",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
