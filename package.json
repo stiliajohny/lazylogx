@@ -4,10 +4,13 @@
   "author": "stilia.johny",
   "license": "GPL-3.0",
   "publisher": "JohnStilia",
-  "description": "A VScode extension that will make lazy debugging easier",
-  "icon": "resources/icon,png",
+  "description": "A VSCode extension that will make lazy debugging easier",
+  "icon": "resources/icon.png",
   "version": "0.0.1",
   "preview": true,
+  "sponsor": {
+    "url": "https://github.com/sponsors/stiliajohny"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
