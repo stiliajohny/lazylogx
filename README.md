@@ -1,65 +1,125 @@
-# easylogx README
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GPL3 License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Ask Me Anything][ask-me-anything]][personal-page]
+<br>
 
-This is the README for your extension "easylogx". After writing up a brief description, we recommend including the following sections.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/stiliajohny/pasteportal">
+    <img src="https://github.com/stiliajohny/easylox/raw/master/resources/icon.png" alt="Main Logo" width="80" height="80">
+  </a>
 
-## Features
+  <h3 align="center">EasyLogX</h3>
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+  <p align="center">
+A VSCode extension that will make lazy debugging easier
+    <br />
+    <a href="https://marketplace.visualstudio.com/items?itemName=JohnStilia.easylogx">VSCode Extension</a>
+    </br>
+    <a href="https://github.com/stiliajohny/pasteportal/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
+    ·
+    <a href="https://github.com/stiliajohny/pasteportal/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
 
-For example if there is an image subfolder under your extension project workspace:
+  </p>
+</p>
 
-\!\[feature X\]\(images/feature-x.png\)
+<!-- TABLE OF CONTENTS -->
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Table of Contents
 
-## Requirements
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Usage](#usage)
+- [Using the VSCode Extension](#using-the-vscode-extension)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+<!-- ABOUT THE PROJECT -->
 
-## Extension Settings
+## About The Project
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Are you tired of writing the same console.log statements over and over again? Well, this extension is for you. It will help you with a simple keybind to append on a new line the supported log statement of the language you use.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+We have them all, from Python to C# and even JavaScript.
 
 ---
 
-## Working with Markdown
+## Usage
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+## Using the VSCode Extension
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+1. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=JohnStilia.easylogx)
+2. Write Code
+3. Select a variable
+4. Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Cmd</kbd>+<kbd>L</kbd> or <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>L</kbd> to log the variable on a new line.
+5. Run your code and enjoy lazy debugging.
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Roadmap
 
-**Enjoy!**
+See the [open issues](https://github.com/stiliajohny/pasteportal/issues) for a list of proposed features (and known issues).
+
+---
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the GPLv3 License. See `LICENSE` for more information.
+
+## Contact
+
+John Stilia - stilia.johny@gmail.com
+
+---
+
+## Acknowledgements
+
+- [Yezen](https://github.com/null0)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Img Shields](https://shields.io)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Pages](https://pages.github.com)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/stiliajohny/pasteportal.svg
+[contributors-url]: https://github.com/stiliajohny/pasteportal/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/stiliajohny/pasteportal.svg
+[forks-url]: https://github.com/stiliajohny/pasteportal/network/members
+[stars-shield]: https://img.shields.io/github/stars/stiliajohny/pasteportal.svg
+[stars-url]: https://github.com/stiliajohny/pasteportal/stargazers
+[issues-shield]: https://img.shields.io/github/issues/stiliajohny/pasteportal.svg
+[issues-url]: https://github.com/stiliajohny/pasteportal/issues
+[license-shield]: https://img.shields.io/github/license/stiliajohny/pasteportal
+[license-url]: https://github.com/stiliajohny/pasteportal/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg
+
+[linkedin-url]: https://linkedin.com/in/]/
+[product-screenshot]: .assets/screenshot.png
+[ask-me-anything]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
+[personal-page]: https://github.com/stiliajohny
