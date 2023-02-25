@@ -31,7 +31,15 @@ async function addLazyDebugging(editor, selection, text, language, currentLine, 
             extraIdentation: true,
             identationLength: 4,
             controlFlowStatements: ['if', 'elif', 'else', 'for', 'while', 'try', 'except', 'finally', 'with', 'def', 'class']
+        },
+        go: {
+            defaultStatement: 'fmt.Println',
+            consoleLogText: `fmt.Println(\"${icon} LazyLogX Lazy Debugging for: ${text}  => \" + ${text})\n`,
+            extraIdentation: true,
+            identationLength: 4,
+            controlFlowStatements: ['if', 'else', 'for', 'switch', 'select', 'range', 'func', 'struct', 'interface', 'map', 'chan']
         }
+
     }
 
     // if text is contain a space then print a warning message
@@ -42,7 +50,7 @@ async function addLazyDebugging(editor, selection, text, language, currentLine, 
 
     // check if the language is on the list of the languageMap, if it is not return a warning message saying that the language is not supported
     if (!languageMap[language]) {
-        vscode.window.showWarningMessage('Sorry, this language is not supported yet 😔');
+        vscode.window.showWarningMessage(`Sorry, this language (${language}) is not supported yet 😔`);
         return;
     }
 
