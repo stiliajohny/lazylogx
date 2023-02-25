@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/stiliajohny/lazylogx">
-    <img src="https://github.com/stiliajohny/easylox/raw/master/resources/icon.png" alt="Main Logo" width="80" height="80">
+    <img src="https://github.com/stiliajohny/lazylogx/raw/master/resources/icon.png" alt="Main Logo" width="80" height="80">
   </a>
 
   <h3 align="center">LazyLogX</h3>
@@ -46,6 +46,8 @@ A VSCode extension that will make lazy debugging easier
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+
+<img src="https://github.com/stiliajohny/lazylogx/raw/master/resources/anim.gif" >
 
 Are you tired of writing the same console.log statements over and over again? Well, this extension is for you. It will help you with a simple keybind to append on a new line the supported log statement of the language you use.
 
