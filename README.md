@@ -32,6 +32,8 @@ A VSCode extension that will make lazy debugging easier
 
 ## Table of Contents
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cf849df067a9412480962c05777538f6)](https://app.codacy.com/gh/stiliajohny/lazylogx?utm_source=github.com&utm_medium=referral&utm_content=stiliajohny/lazylogx&utm_campaign=Badge_Grade_Settings)
+
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
 - [Usage](#usage)
