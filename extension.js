@@ -1,212 +1,144 @@
 const vscode = require('vscode');
 
+function randomConsolLogIcon() {
+    const iconArray = ['📄', '🗒️', '📝', '📃', '📑', '🧾', '📜', '📋', '📇', '📰', '📓', '📔', '📒', '📕', '📗', '📘', '📙', '📚', '📖', '🗞️', '📑'];
+    return iconArray[Math.floor(Math.random() * iconArray.length)];
+}
+
+
+async function addLazyDebugging(editor, selection, text, language, currentLine, currentLineText, currentLineIdentation) {
+    let newLine = currentLine + 1;
+    const icon = randomConsolLogIcon();
+
+    // create a map object with the language and the console log text and the need for identation or not
+    const languageMap = {
+        javascript: {
+            defaultStatement: 'console.log',
+            consoleLogText: `console.log(\`${icon} LazyLogX Lazy Debugging for: ${text}  =>  \${${text}}\`);\n`,
+            extraIdentation: false,
+            controlFlowStatements: ['if', 'else', 'for', 'while', 'try', 'catch', 'finally', 'with', 'function', 'class']
+        },
+        typescript: {
+            defaultStatement: 'console.log',
+            consoleLogText: `console.log(\`${icon} LazyLogX Lazy Debugging for: ${text}  =>  \${${text}}\`);\n`,
+            extraIdentation: false,
+            identationLength: null,
+            controlFlowStatements: ['if', 'else', 'for', 'while', 'try', 'catch', 'finally', 'with', 'function', 'class']
+        },
+        python: {
+            defaultStatement: 'print',
+            consoleLogText: `print(\"${icon} LazyLogX Lazy Debugging for: ${text}  => \" + str(${text}))\n`,
+            extraIdentation: true,
+            identationLength: 4,
+            controlFlowStatements: ['if', 'elif', 'else', 'for', 'while', 'try', 'except', 'finally', 'with', 'def', 'class']
+        }
+    }
+
+    // if text is contain a space then print a warning message
+    if (text.includes(' ')) {
+        vscode.window.showWarningMessage('Sorry, the selected text contains a space 😔');
+        return;
+    }
+
+    // check if the language is on the list of the languageMap, if it is not return a warning message saying that the language is not supported
+    if (!languageMap[language]) {
+        vscode.window.showWarningMessage('Sorry, this language is not supported yet 😔');
+        return;
+    }
+
+    // if the current line text contains the default statement then delete the line and move one line up
+    if (currentLineText.includes(languageMap[language].defaultStatement)) {
+        editor.edit(editBuilder => {
+            editBuilder.delete(new vscode.Range(new vscode.Position(currentLine, 0), new vscode.Position(currentLine + 1, 0)));
+        });
+
+    }
+    // else if if the current line text doesnt contains the console log text then check if there is a selection or not
+    else if (!currentLineText.includes(languageMap[language].consoleLogText)) {
+        // if there is not a selection return an error
+        if (selection.isEmpty) {
+            vscode.window.showErrorMessage('Cmon now, select something first! 😅');
+            return;
+        }
+    }
+
+
+    // check if the language is supported
+    // if the language is supoprted then check if it requires extra identation
+    let languageSpecificConsoleLog = '';
+    if (languageMap[language]) {
+
+        // check if the current line text contains any of the control flow statements
+        // if it does add the idendationLength spaces to the console log text
+        // if it doesn't contain any of the control flow statements then just add the console log text
+        if (languageMap[language].controlFlowStatements.some(statement => currentLineText.includes(statement))) {
+            // add the identation length to the console log text as many times as the identation length
+            console.log("flow statement found");
+            // create a string with as many spaces as specified on the identationLength and do it smart
+            let identationString = '';
+            for (let i = 0; i < languageMap[language].identationLength; i++) {
+                identationString += ' ';
+            }
+
+            languageSpecificConsoleLog = identationString + languageMap[language].consoleLogText;
+        }
+        else {
+            console.log("flow statement not found")
+            languageSpecificConsoleLog = languageMap[language].consoleLogText;
+        }
+
+    }
+
+
+    // create the new line text
+    let newLineText = currentLineIdentation + languageSpecificConsoleLog;
+
+    // insert the new line text
+    editor.edit(editBuilder => {
+        editBuilder.insert(new vscode.Position(newLine, 0), newLineText);
+    }
+    );
+}
+
 
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
 
-	console.log('Congratulations, your extension "easylogx" is now active!');
+    console.log('Congratulations, your extension "lazylogx" is now active!');
+    try {
+        let disposable = vscode.commands.registerCommand('lazylogx.addLazyDebugging', function () {
 
-	let disposable = vscode.commands.registerCommand('lazylogx.addLazyDebugging', function () {
+            // get the sellected text from the editor
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) throw new Error('No editor found');
+            let selection = editor.selection;
+            let text = editor.document.getText(selection);
 
-        let consoleLogText = "📃 LazyLogX Lazy Debugging: "
+            // detect what is the language of the file
+            let language = editor.document.languageId;
 
-		// get the sellected text from the editor
-		let editor = vscode.window.activeTextEditor;
-		let selection = editor.selection;
-
-		let text = editor.document.getText(selection);
-
-        // add the consoleLogText at the beginning of the text with double quoets also convert the text to a string
-        text = '"' + consoleLogText + '" + '  +  String(text) ; // FIXME  this is some crazy ass string manipulation here
-
-
-		// detect what is the language of the file
-		let language = editor.document.languageId;
-
-		let currentLine = editor.selection.active.line;
-
-		// get the current line text
-		let currentLineText = editor.document.lineAt(currentLine).text;
-
-		// get the current line identation
-		let currentLineIdentation = currentLineText.substring(0, currentLineText.indexOf(currentLineText.trim()));
-
-		// print a console.log on the next line, with the same identation
-		let newLine = currentLine + 1;
-
-		let languageSpecificConsoleLog = '';
-
-        // conditioanly set the language specific console log
-        switch (language) {
-            case 'javascript':
-                languageSpecificConsoleLog = `console.log(${text});\n`;
-                break;
-            case 'typescript':
-                languageSpecificConsoleLog = `console.log(${text});\n`;
-                break;
-            case 'python':
-                languageSpecificConsoleLog = `print(${text})\n`;
-                break;
-            case 'java':
-                languageSpecificConsoleLog = `System.out.println(${text});\n`;
-                break;
-            case 'csharp':
-                languageSpecificConsoleLog = `Console.WritelanguageSpecificConsoleLog(${text});\n`;
-                break;
-            case 'php':
-                languageSpecificConsoleLog = `echo ${text};\n`;
-                break;
-            case 'ruby':
-                languageSpecificConsoleLog = `puts ${text}\n`;
-                break;
-            case 'go':
-                languageSpecificConsoleLog = `fmt.Println(${text})\n`;
-                break;
-            case 'rust':
-                languageSpecificConsoleLog = `println!(${text})\n`;
-                break;
-            case 'swift':
-                languageSpecificConsoleLog = `print(${text})\n`;
-                break;
-            case 'kotlin':
-                languageSpecificConsoleLog = `println(${text})\n`;
-                break;
-            case 'dart':
-                languageSpecificConsoleLog = `print(${text})\n`;
-                break;
-            case 'scala':
-                languageSpecificConsoleLog = `println(${text})\n`;
-                break;
-            case 'haskell':
-                languageSpecificConsoleLog = `putStrLn ${text}\n`;
-                break;
-            case 'elixir':
-                languageSpecificConsoleLog = `IO.puts(${text})\n`;
-                break;
-            case 'clojure':
-                languageSpecificConsoleLog = `(println ${text})\n`;
-                break;
-            case 'fsharp':
-                languageSpecificConsoleLog = `printfn ${text}\n`;
-                break;
-            case 'erlang':
-                languageSpecificConsoleLog = `io:format(${text})\n`;
-                break;
-            case 'perl':
-                languageSpecificConsoleLog = `print ${text}\n`;
-                break;
-            case 'lua':
-                languageSpecificConsoleLog = `print(${text})\n`;
-                break;
-            case 'r':
-                languageSpecificConsoleLog = `print(${text})\n`;
-                break;
-            case 'powershell':
-                languageSpecificConsoleLog = `Write-Host ${text}\n`;
-                break;
-            case 'coffeescript':
-                languageSpecificConsoleLog = `console.log(${text})\n`;
-                break;
-            case 'julia':
-                languageSpecificConsoleLog = `println(${text})\n`;
-                break;
-            case 'nim':
-                languageSpecificConsoleLog = `echo ${text}\n`;
-                break;
-            case 'crystal':
-                languageSpecificConsoleLog = `puts ${text}\n`;
-                break;
-            case 'ocaml':
-                languageSpecificConsoleLog = `print_endlanguageSpecificConsoleLog ${text}\n`;
-                break;
-            case 'groovy':
-                languageSpecificConsoleLog = `println ${text}\n`;
-                break;
-            case 'pascal':
-                languageSpecificConsoleLog = `writeln(${text})\n`;
-                break;
-            case 'racket':
-                languageSpecificConsoleLog = `(display ${text})\n`;
-                break;
-            case 'scheme':
-                languageSpecificConsoleLog = `(display ${text})\n`;
-                break;
-            case 'smalltalk':
-                languageSpecificConsoleLog = `Transcript cr; show: ${text}.\n`;
-                break;
-            case 'fortran':
-                languageSpecificConsoleLog = `write(*,*) ${text}\n`;
-                break;
-            case 'd':
-                languageSpecificConsoleLog = `writeln(${text})\n`;
-                break;
-            case 'lisp':
-                languageSpecificConsoleLog = `(print ${text})\n`;
-                break;
-            case 'hack':
-                languageSpecificConsoleLog = `echo ${text}\n`;
-                break;
-            case 'matlab':
-                languageSpecificConsoleLog = `disp(${text})\n`;
-                break;
-            case 'verilog':
-                languageSpecificConsoleLog = `display ${text}\n`;
-                break;
-            case 'vhdl':
-                languageSpecificConsoleLog = `report ${text}\n`;
-                break;
-            case 'ada':
-                languageSpecificConsoleLog = `put_languageSpecificConsoleLog(${text})\n`;
-                break;
-            case 'prolog':
-                languageSpecificConsoleLog = `write(${text})\n`;
-                break;
-            case 'sql':
-                languageSpecificConsoleLog = `print ${text}\n`;
-                break;
-            case 'tcl':
-                languageSpecificConsoleLog = `puts ${text}\n`;
-                break;
-            case 'visualbasic':
-                languageSpecificConsoleLog = `Console.WritelanguageSpecificConsoleLog(${text})\n`;
-                break;
-            case 'actionscript':
-                languageSpecificConsoleLog = `trace(${text})\n`;
-                break;
-            case 'apex':
-                languageSpecificConsoleLog = `System.debug(${text})\n`;
-                break;
-            case 'c':
-                languageSpecificConsoleLog = `printf(${text})\n`;
-                break;
-            case 'cpp':
-                languageSpecificConsoleLog = `printf(${text})\n`;
-                break;
-        }
-
-        // create the new line text
-		let newLineText = currentLineIdentation + languageSpecificConsoleLog;
-
-        // insert the new line text
-		editor.edit(editBuilder => {
-			editBuilder.insert(new vscode.Position(newLine, 0), newLineText);
-		}
-		);
+            let currentLine = editor.selection.active.line;
 
 
+            // get the current line text and the current line identation
+            let currentLineText = editor.document.lineAt(currentLine).text;
+            let currentLineIdentation = currentLineText.substring(0, currentLineText.indexOf(currentLineText.trim()));
 
+            addLazyDebugging(editor, selection, text, language, currentLine, currentLineText, currentLineIdentation);
 
+        });
 
-	});
+        context.subscriptions.push(disposable);
+    } catch (error) {
 
-	context.subscriptions.push(disposable);
+    }
 }
 
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
-	activate,
-	deactivate
+    activate,
+    deactivate
 }

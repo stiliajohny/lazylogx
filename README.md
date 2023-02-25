@@ -63,63 +63,15 @@ We have them all, from Python to C# and even JavaScript.
 4. Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Cmd</kbd>+<kbd>L</kbd> or <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>Win</kbd>+<kbd>L</kbd> to log the variable on a new line.
 5. Run your code and enjoy lazy debugging.
 
+You can also remote the console statement by going to the line with a statement and press the keybind again.
+
 ---
 
 ## Supported Languages
 
-<details>
-<summary>Expand</summary>
-
 - JavaScript
 - TypeScript
 - Python
-- Java
-- C#
-- PHP
-- Ruby
-- Go
-- Rust
-- Swift
-- Kotlin
-- Dart
-- Scala
-- Haskell
-- Elixir
-- Clojure
-- F#
-- Erlang
-- Perl
-- Lua
-- R
-- PowerShell
-- CoffeeScript
-- Julia
-- Nim
-- Crystal
-- OCaml
-- Groovy
-- Pascal
-- Racket
-- Scheme
-- Smalltalk
-- Fortran
-- D
-- Lisp
-- Hack
-- MATLAB
-- Verilog
-- VHDL
-- Ada
-- Prolog
-- SQL
-- Tcl
-- Visual Basic
-- ActionScript
-- Apex
-- C
-- C++
-- CSS
-  </details>
 
 ## Roadmap
 
