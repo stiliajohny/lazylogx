@@ -77,6 +77,7 @@ You can also remote the console statement by going to the line with a statement 
 - JavaScript
 - TypeScript
 - Python
+- Go
 
 ## Roadmap
 
