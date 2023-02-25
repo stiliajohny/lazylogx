@@ -2,7 +2,7 @@
 
 All notable changes to the "lazylogx" extension will be documented in this file.
 
-## [v0.1.3] - 2023-02-25
+## [v0.1.0] - 2023-02-25
 
 ### Added
 

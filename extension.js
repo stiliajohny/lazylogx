@@ -9,7 +9,6 @@ function randomConsolLogIcon() {
 async function addLazyDebugging(editor, selection, text, language, currentLine, currentLineText, currentLineIdentation) {
     let newLine = currentLine + 1;
     const icon = randomConsolLogIcon();
-
     // create a map object with the language and the console log text and the need for identation or not
     const languageMap = {
         javascript: {
@@ -53,7 +52,6 @@ async function addLazyDebugging(editor, selection, text, language, currentLine, 
         vscode.window.showWarningMessage(`Sorry, this language (${language}) is not supported yet 😔`);
         return;
     }
-
     // if the current line text contains the default statement then delete the line and move one line up
     if (currentLineText.includes(languageMap[language].defaultStatement)) {
         editor.edit(editBuilder => {
@@ -75,32 +73,24 @@ async function addLazyDebugging(editor, selection, text, language, currentLine, 
     // if the language is supoprted then check if it requires extra identation
     let languageSpecificConsoleLog = '';
     if (languageMap[language]) {
-
         // check if the current line text contains any of the control flow statements
         // if it does add the idendationLength spaces to the console log text
         // if it doesn't contain any of the control flow statements then just add the console log text
         if (languageMap[language].controlFlowStatements.some(statement => currentLineText.includes(statement))) {
             // add the identation length to the console log text as many times as the identation length
-            console.log("flow statement found");
             // create a string with as many spaces as specified on the identationLength and do it smart
             let identationString = '';
             for (let i = 0; i < languageMap[language].identationLength; i++) {
                 identationString += ' ';
             }
-
             languageSpecificConsoleLog = identationString + languageMap[language].consoleLogText;
         }
         else {
-            console.log("flow statement not found")
             languageSpecificConsoleLog = languageMap[language].consoleLogText;
         }
-
     }
-
-
     // create the new line text
     let newLineText = currentLineIdentation + languageSpecificConsoleLog;
-
     // insert the new line text
     editor.edit(editBuilder => {
         editBuilder.insert(new vscode.Position(newLine, 0), newLineText);
@@ -117,7 +107,6 @@ function activate(context) {
     console.log('Congratulations, your extension "lazylogx" is now active!');
     try {
         let disposable = vscode.commands.registerCommand('lazylogx.addLazyDebugging', function () {
-
             // get the sellected text from the editor
             let editor = vscode.window.activeTextEditor;
             if (!editor) throw new Error('No editor found');
@@ -126,16 +115,12 @@ function activate(context) {
 
             // detect what is the language of the file
             let language = editor.document.languageId;
-
             let currentLine = editor.selection.active.line;
-
-
             // get the current line text and the current line identation
             let currentLineText = editor.document.lineAt(currentLine).text;
             let currentLineIdentation = currentLineText.substring(0, currentLineText.indexOf(currentLineText.trim()));
 
             addLazyDebugging(editor, selection, text, language, currentLine, currentLineText, currentLineIdentation);
-
         });
 
         context.subscriptions.push(disposable);
