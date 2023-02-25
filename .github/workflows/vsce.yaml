@@ -15,8 +15,6 @@ jobs:
           node-version: 16
       # - run: npm ci on a specific folder
       - run: |
-          cd vscode-extension
-          ls
           npm ci
 
       - name: Publish to Visual Studio Marketplace
