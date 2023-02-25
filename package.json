@@ -45,6 +45,9 @@
     }
   ],
   "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:lazylogx.addLazyDebugging"
+  ],
   "contributes": {
     "commands": [
       {
