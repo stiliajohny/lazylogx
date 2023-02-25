@@ -6,6 +6,9 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Ask Me Anything][ask-me-anything]][personal-page]
 <br>
+[![DeepScan grade](https://deepscan.io/api/teams/20369/projects/23976/branches/733365/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20369&pid=23976&bid=733365)
+[![DeepSource](https://deepsource.io/gh/stiliajohny/lazylogx.svg/?label=active+issues&show_trend=true&token=6JQcSY0CMG0I2x05AgkwzzS3)](https://deepsource.io/gh/stiliajohny/lazylogx/?ref=repository-badge)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/05def42fc9d64638a1dcedd149d1d5ed)](https://www.codacy.com/gh/stiliajohny/lazylogx/dashboard?utm_source=github.com&utm_medium=referral&utm_content=stiliajohny/lazylogx&utm_campaign=Badge_Grade)
 
 <!-- PROJECT LOGO -->
 <br />
