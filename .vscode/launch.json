@@ -13,7 +13,16 @@
         "--extensionDevelopmentPath=${workspaceFolder}",
         "--profile-temp",
         "--disable-extensions",
-        "--disable-gpu"
+        "--disable-gpu",
+        "--disable-restore-windows",
+        "--disable-telemetry",
+        "--disable-updates",
+        "--disable-web-security",
+        "--disable-write-watchdog",
+        "--disable-xss-auditor",
+        "--enable-logging",
+        "--ignore-certificate-errors",
+        "--ignore-certificate-errors-spki-list"
       ]
     },
     {

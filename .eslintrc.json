@@ -20,6 +20,29 @@
     "no-unreachable": "warn",
     "no-unused-vars": "warn",
     "constructor-super": "warn",
-    "valid-typeof": "warn"
+    "valid-typeof": "warn",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-extra-semi": "warn",
+    "no-irregular-whitespace": "warn",
+    "no-unsafe-finally": "warn",
+    "no-unused-labels": "warn",
+    "no-var": "warn",
+    "prefer-const": "warn",
+    "no-constant-condition": "warn",
+    "no-dupe-args": "warn",
+    "no-dupe-class-members": "warn",
+    "no-dupe-keys": "warn",
+    "no-empty": "warn",
+    "no-empty-character-class": "warn",
+    "no-ex-assign": "warn",
+    "no-func-assign": "warn"
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

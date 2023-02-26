@@ -23,8 +23,12 @@ function randomConsolLogIcon() {
     "📖",
     "🗞️",
     "📑",
+    "🔖",
+    "🏷️",
   ];
-  return iconArray[Math.floor(Math.random() * iconArray.length)];
+  const randomIcon = iconArray[Math.floor(Math.random() * iconArray.length)];
+
+  return randomIcon;
 }
 
 async function addLazyDebugging(
@@ -111,6 +115,21 @@ async function addLazyDebugging(
         "interface",
         "map",
         "chan",
+      ],
+    },
+    shellscript: {
+      defaultStatement: "echo",
+      consoleLogText: `echo \"${icon} LazyLogX Lazy Debugging for: \\${text}  => \" ${text}\n`,
+      extraIdentation: true,
+      identationLength: 4,
+      controlFlowStatements: [
+        "if",
+        "else",
+        "for",
+        "while",
+        "case",
+        "function",
+        "select",
       ],
     },
   };
