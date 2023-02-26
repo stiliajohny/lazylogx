@@ -2,6 +2,52 @@
 
 All notable changes to the "lazylogx" extension will be documented in this file.
 
+## [v0.2.1] - 2023-02-26
+
+### Added
+
+- None
+
+### Changed
+
+- Right Click menu for the extension
+
+### Removed
+
+- None
+
+### Fixed
+
+- None
+
+### Security
+
+- None
+
+## [v0.2.0] - 2023-02-26
+
+### Added
+
+- Support for ShellScript
+
+### Changed
+
+- Update random icon
+- Update ESLint rules
+- Stucture of the code
+
+### Removed
+
+- None
+
+### Fixed
+
+- None
+
+### Security
+
+- None
+
 ## [v0.1.0] - 2023-02-25
 
 ### Added
@@ -24,31 +70,6 @@ All notable changes to the "lazylogx" extension will be documented in this file.
 ### Fixed
 
 - Fixed the issue with the console.log statement
-
-### Security
-
-- None
-
-## [v0.2.0] - 2023-02-26
-
-### Added
-
-- Support for ShellScript
--
-
-### Changed
-
-- Update random icon
-- Update ESLint rules
-- Stucture of the code
-
-### Removed
-
-- None
-
-### Fixed
-
-- None
 
 ### Security
 
