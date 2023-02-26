@@ -6,7 +6,7 @@
   "publisher": "JohnStilia",
   "description": "A VSCode extension that will make lazy debugging easier",
   "icon": "resources/icon.png",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "preview": true,
   "sponsor": {
     "url": "https://github.com/sponsors/stiliajohny"
@@ -52,7 +52,7 @@
     "commands": [
       {
         "command": "lazylogx.addLazyDebugging",
-        "title": "Add lazy debbuging"
+        "title": "Lazy debbuging"
       }
     ],
     "keybindings": [
