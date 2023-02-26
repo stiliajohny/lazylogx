@@ -28,3 +28,28 @@ All notable changes to the "lazylogx" extension will be documented in this file.
 ### Security
 
 - None
+
+## [v0.2.0] - 2023-02-26
+
+### Added
+
+- Support for ShellScript
+-
+
+### Changed
+
+- Update random icon
+- Update ESLint rules
+- Stucture of the code
+
+### Removed
+
+- None
+
+### Fixed
+
+- None
+
+### Security
+
+- None
