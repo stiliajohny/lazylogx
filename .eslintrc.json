@@ -38,13 +38,8 @@
     "no-ex-assign": "warn",
     "no-func-assign": "warn"
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
-  "plugins": [
-    "react"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react"],
   "settings": {
     "react": {
       "version": "detect"

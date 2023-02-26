@@ -24,9 +24,9 @@ function randomConsolLogIcon() {
     "🗞️",
     "📑",
     "🔖",
-    "🏷️"
+    "🏷️",
   ];
-  let randomIcon = iconArray[Math.floor(Math.random() * iconArray.length)];
+  const randomIcon = iconArray[Math.floor(Math.random() * iconArray.length)];
 
   return randomIcon;
 }
@@ -132,7 +132,6 @@ async function addLazyDebugging(
         "select",
       ],
     },
-
   };
 
   // if text is contain a space then print a warning message
@@ -240,10 +239,10 @@ function activate(context) {
     );
 
     context.subscriptions.push(disposable);
-  } catch (error) { }
+  } catch (error) {}
 }
 
-function deactivate() { }
+function deactivate() {}
 
 module.exports = {
   activate,
