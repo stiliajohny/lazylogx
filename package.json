@@ -52,7 +52,7 @@
     "commands": [
       {
         "command": "lazylogx.addLazyDebugging",
-        "title": "Lazy debbuging"
+        "title": "Lazy debugging"
       }
     ],
     "keybindings": [
