@@ -2,6 +2,28 @@
 
 All notable changes to the "lazylogx" extension will be documented in this file.
 
+## [v0.2.2] - 2023-02-26
+
+### Added
+
+- None
+
+### Changed
+
+- None
+
+### Removed
+
+- None
+
+### Fixed
+
+- Typo on the Right Click menu
+
+### Security
+
+- None
+
 ## [v0.2.1] - 2023-02-26
 
 ### Added
