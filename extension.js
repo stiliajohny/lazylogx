@@ -79,6 +79,24 @@ async function addLazyDebugging(
         "class",
       ],
     },
+    typescriptreact: {
+      defaultStatement: "console.log",
+      consoleLogText: `console.log(\`${icon} LazyLogX Lazy Debugging for: ${text}  =>  \${${text}}\`);\n`,
+      extraIdentation: false,
+      identationLength: null,
+      controlFlowStatements: [
+        "if",
+        "else",
+        "for",
+        "while",
+        "try",
+        "catch",
+        "finally",
+        "with",
+        "function",
+        "class",
+      ],
+    },
     python: {
       defaultStatement: "print",
       consoleLogText: `print(\"${icon} LazyLogX Lazy Debugging for: ${text}  => \" + str(${text}))\n`,
@@ -239,10 +257,10 @@ function activate(context) {
     );
 
     context.subscriptions.push(disposable);
-  } catch (error) {}
+  } catch (error) { }
 }
 
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
   activate,
