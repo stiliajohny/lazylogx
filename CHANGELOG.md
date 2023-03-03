@@ -2,6 +2,28 @@
 
 All notable changes to the "lazylogx" extension will be documented in this file.
 
+## [v0.3.0] - 2023-02-26
+
+### Added
+
+- Support for TypescriptReact filetype
+
+### Changed
+
+- None
+
+### Removed
+
+- None
+
+### Fixed
+
+- Typo on the Right Click menu
+
+### Security
+
+- None
+
 ## [v0.2.2] - 2023-02-26
 
 ### Added
