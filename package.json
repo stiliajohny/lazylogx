@@ -6,7 +6,7 @@
   "publisher": "JohnStilia",
   "description": "A VSCode extension that will make lazy debugging easier",
   "icon": "resources/icon.png",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "preview": true,
   "sponsor": {
     "url": "https://github.com/sponsors/stiliajohny"
