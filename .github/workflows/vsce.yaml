@@ -32,10 +32,11 @@ jobs:
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_CHANNEL: github
+          SLACK_CHANNEL: lazylogx
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
           SLACK_ICON: https://github.com/rtCamp.png?size=48
           SLACK_MESSAGE: "Kaboom, new version ${{ github.ref }} published to VS Code Marketplace.\n check it out here: https://marketplace.visualstudio.com/items?itemName=JohnStilia.lazylogx"
           SLACK_TITLE: Deployment successful
           SLACK_USERNAME: "AutomateX"
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_FOOTER: "the non existing automation bot"
