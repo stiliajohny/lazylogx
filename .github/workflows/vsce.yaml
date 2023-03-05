@@ -3,10 +3,10 @@ on:
   push:
     tags:
       - "*"
-  workflow_dispatch:
 
 jobs:
-  deploy:
+  publish_to_vsce:
+    name: Publish to VS Code Marketplace
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,3 +23,19 @@ jobs:
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
           registryUrl: https://marketplace.visualstudio.com
           packagePath: ./
+
+  slack-notification:
+    runs-on: ubuntu-latest
+    name: Slack Notification
+    needs: publish_to_vsce
+    steps:
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: github
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_MESSAGE: "Kaboom, new version ${{ github.ref }} published to VS Code Marketplace.\n check it out here: https://marketplace.visualstudio.com/items?itemName=JohnStilia.lazylogx"
+          SLACK_TITLE: Deployment successful
+          SLACK_USERNAME: "AutomateX"
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
